@@ -1,0 +1,36 @@
+@import "../../add_num/main.wxss";
+
+._section.data-v-4067d0f4 {
+    padding: 0 30rpx;
+    margin-bottom: 16rpx;
+    background-color: #fff;
+    font-size: 24rpx;
+    color: #999;
+}
+
+._section.total.data-v-4067d0f4 {
+    padding: 30rpx;
+}
+
+._section ._strong.data-v-4067d0f4 {
+    color: #fa4b00;
+    font-weight: 700;
+    font-size: 44rpx;
+}
+
+._section ._strong ._i.data-v-4067d0f4 {
+    display: inline;
+    font-size: 28rpx;
+}
+
+._section .row.data-v-4067d0f4 {
+    display: flex;
+    justify-content: space-between;
+    padding: 37rpx 0 34rpx;
+    font-size: 28rpx;
+    border-bottom: 1rpx solid #ebebeb;
+}
+
+._section .row ._label.data-v-4067d0f4 {
+    color: #353535;
+}

@@ -1,0 +1,9 @@
+<template name="165ea750">
+    <view class="_div data-v-4c5b63a7 loan-computer-title">
+        <view class="_ul data-v-4c5b63a7 tabs">
+            <view bindtap="handleProxy" class="_li data-v-4c5b63a7 {{[type===item?'active':'']}}" data-comkey="{{$k}}" data-eventid="{{'0-'+index}}" data-type="{{item}}" key="{{index}}" wx:for="{{types}}" wx:key="index">
+            {{item}}
+        </view>
+        </view>
+    </view>
+</template>

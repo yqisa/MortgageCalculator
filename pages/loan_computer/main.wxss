@@ -1,0 +1,158 @@
+@import "../add_num/main.wxss";
+
+.loan-computer-page .form-wrap {
+    width: 100%;
+    padding: 0 30rpx;
+    background-color: #fff;
+    border-bottom: 2rpx solid #e5e5e5;
+}
+
+.loan-computer-page .form-wrap .row {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding: 26rpx 0 20rpx;
+    background-color: #fff;
+    border-bottom: 2rpx solid #f0f0f0;
+}
+
+.loan-computer-page .form-wrap .row.multi-row {
+    height: auto;
+    align-items: flex-start;
+}
+
+.loan-computer-page .form-wrap ._label {
+    width: 230rpx;
+    font-size: 30rpx;
+    color: #353535;
+}
+
+.loan-computer-page .form-wrap .content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    flex: 1;
+    font-size: 28rpx;
+    color: #666;
+    text-align: right;
+}
+
+.loan-computer-page .form-wrap .content ._input,.loan-computer-page .form-wrap .content.shadow ._form,.loan-computer-page .form-wrap .content picker {
+    flex: 1;
+}
+
+.loan-computer-page .form-wrap .content .unit {
+    display: inline-block;
+    margin-left: .6em;
+    vertical-align: middle;
+}
+
+.loan-computer-page .btn-wrap {
+    margin:20px auto;
+    margin-left: 10%
+
+}
+
+.loan-computer-page ._p {
+    padding: 0 30rpx;
+    margin-top: 20rpx;
+    margin-bottom: 24rpx;
+    font-size: 28rpx;
+    color: #b3b3b3;
+}
+
+.loan-computer-page .multi-content {
+    width: 500rpx;
+    flex-wrap: wrap;
+}
+
+.loan-computer-page .multi-content .input-row {
+    display: flex;
+    width: 500rpx;
+    align-items: center;
+}
+
+.loan-computer-page .multi-content .input-row ._i {
+    display: inline-block;
+    margin: 0 14rpx;
+}
+
+.loan-computer-page .multi-content ._p {
+    font-size: 24rpx;
+    color: #999;
+    text-align: left;
+}
+
+.loan-computer-page .large-input,.loan-computer-page .mini-input {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80rpx;
+    padding: 24rpx;
+    line-height: 80rpx;
+    background: #f2f2f2;
+    border-radius: 8rpx;
+    color: #666;
+    font-size: 28rpx;
+}
+
+.loan-computer-page .large-input ._input,.loan-computer-page .mini-input ._input {
+    color: #000;
+    text-align: left;
+}
+
+.loan-computer-page .large-input {
+    width: 460rpx;
+}
+
+.loan-computer-page .mini-input {
+    width: 160rpx;
+}
+
+.loan-computer-page .select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.loan-computer-page .select .item {
+    width: 80rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    border: 2rpx solid #999;
+    margin-right: 6rpx;
+    font-size: 24rpx;
+    color: #999;
+    border-radius: 4rpx;
+    text-align: center;
+}
+
+.loan-computer-page .select .item.active {
+    border-color: #00ad82;
+    color: #00ad82;
+    font-weight: 700;
+}
+
+.tabs.data-v-4c5b63a7 {
+    display: flex;
+    width: 580rpx;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tabs>._li.data-v-4c5b63a7 {
+    height: 100%;
+    font-size: 28rpx;
+    color: #444;
+    margin-right: 40rpx;
+    border-bottom: 4rpx solid transparent;
+}
+
+.tabs>._li.active.data-v-4c5b63a7 {
+    font-size: 36rpx;
+    color: #1e81dd;
+    border-color: #1f82dd;
+}

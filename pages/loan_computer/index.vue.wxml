@@ -1,0 +1,158 @@
+<import src="_tabs.vue.wxml"></import>
+<template name="1764b366">
+    <view class="_div data-v-4bd85d9c page loan-computer-page">
+        <template is="165ea750" data="{{...$root[$kk+'0'],$root:$root}}"></template>
+        <view class="_div data-v-4bd85d9c form-wrap">
+            <view class="_div data-v-4bd85d9c row" wx:if="{{total_price}}">
+                <label class="_label data-v-4bd85d9c">贷款总额</label>
+                <view class="_div data-v-4bd85d9c content">
+                {{total_price}}
+                万
+            </view>
+            </view>
+            <view class="_div data-v-4bd85d9c row" wx:if="{{total_price}}">
+                <label class="_label data-v-4bd85d9c">首付金额</label>
+                <view class="_div data-v-4bd85d9c content">
+                {{down_payment}}万
+                <view class="_div data-v-4bd85d9c select">
+                        <view bindtap="handleProxy" class="_div data-v-4bd85d9c item {{[ [item.key===selected_rate?'active':''] ]}}" data-comkey="{{$k}}" data-eventid="{{'1-'+i}}" data-key="{{item.key}}" key="{{i}}" wx:for="{{down_payment_select}}" wx:for-index="i" wx:key="i">
+                        {{item.text}}
+                    </view>
+                    </view>
+                </view>
+            </view>
+            <view class="_div data-v-4bd85d9c row">
+                <label class="_label data-v-4bd85d9c">还款方式</label>
+                <view class="_div data-v-4bd85d9c content navigator-arrow">
+                    <picker bindchange="handleProxy" class="_picker data-v-4bd85d9c" data-comkey="{{$k}}" data-eventid="{{'2'}}" range="{{types}}" rangeKey="text" value="{{type_value}}">
+                        <view class="_view data-v-4bd85d9c picker">{{types[type_value].text}}</view>
+                    </picker>
+                </view>
+            </view>
+            <view class="_div data-v-4bd85d9c row" wx:if="{{isBusiness||isCompose}}">
+                <label class="_label data-v-4bd85d9c">商贷总额</label>
+                <view class="_div data-v-4bd85d9c content">
+                    <label class="_span data-v-4bd85d9c large-input">
+                        <input bindinput="handleProxy" class="_input data-v-4bd85d9c" data-comkey="{{$k}}" data-eventid="{{'3'}}" placeholder="请输入商业贷款总额" type="number" value="{{business_loan}}"></input>
+                    万
+                </label>
+                </view>
+            </view>
+            <view class="_div data-v-4bd85d9c row" wx:if="{{isPublic||isCompose}}">
+                <label class="_label data-v-4bd85d9c">公积金贷款总额</label>
+                <view class="_div data-v-4bd85d9c content">
+                    <label class="_span data-v-4bd85d9c large-input">
+                        <input bindinput="handleProxy" class="_input data-v-4bd85d9c" data-comkey="{{$k}}" data-eventid="{{'4'}}" placeholder="请输入公积金贷款总额" type="number" value="{{public_loan}}"></input>
+                    万
+                </label>
+                </view>
+            </view>
+            <view class="_div data-v-4bd85d9c row">
+                <label class="_label data-v-4bd85d9c">按揭年数</label>
+                <view class="_div data-v-4bd85d9c content navigator-arrow">
+                    <picker bindchange="handleProxy" class="_picker data-v-4bd85d9c" data-comkey="{{$k}}" data-eventid="{{'5'}}" range="{{years}}" start="{{currentDate}}" value="{{year_value}}">
+                        <view class="_view data-v-4bd85d9c picker">{{year+'年('+year*12+'月)'}}</view>
+                    </picker>
+                </view>
+            </view>
+            <view class="_div data-v-4bd85d9c row">
+                <label class="_label data-v-4bd85d9c">首次还款日期</label>
+                <view class="_div data-v-4bd85d9c content navigator-arrow">
+                    <picker bindchange="handleProxy" class="_picker data-v-4bd85d9c" data-comkey="{{$k}}" data-eventid="{{'6'}}" mode="date">
+                        <view class="_view data-v-4bd85d9c picker">{{from_date_show}}</view>
+                    </picker>
+                </view>
+            </view>
+            <view class="_div data-v-4bd85d9c row multi-row">
+                <label class="_label data-v-4bd85d9c">LPR利率(%)</label>
+                <view class="_div data-v-4bd85d9c content multi-content">
+                    <view class="_div data-v-4bd85d9c" wx:if="{{isBusiness||isCompose}}">
+                        <view class="_div data-v-4bd85d9c input-row">
+                            <label class="_span data-v-4bd85d9c mini-input">
+                                <input bindinput="handleProxy" class="_input data-v-4bd85d9c" data-comkey="{{$k}}" data-eventid="{{'7'}}" type="digit" value="{{business_base_rate}}"></input>
+                            %
+                        </label>
+                            
+                         
+                    </view>
+                    </view>
+                    
+                </view>
+            </view>
+<view class="_div data-v-4bd85d9c row multi-row">
+                <label class="_label data-v-4bd85d9c">基点</label>
+                <view class="_div data-v-4bd85d9c content multi-content">
+                    <view class="_div data-v-4bd85d9c" wx:if="{{isBusiness||isCompose}}">
+                        <view class="_div data-v-4bd85d9c input-row">
+                            <view class="_i data-v-4bd85d9c">+</view>
+                            <label class="_span data-v-4bd85d9c mini-input">
+                                <input bindinput="handleProxy" class="_input data-v-4bd85d9c" data-comkey="{{$k}}" data-eventid="{{'8'}}" type="digit" value="{{business_multiple}}"></input>
+                            BP(‱)
+                        </label>
+                    </view>
+                    </view>
+                    <view class="_div data-v-4bd85d9c" wx:if="{{isPublic}}">
+                        <view class="_div data-v-4bd85d9c input-row">
+                            <label class="_span data-v-4bd85d9c mini-input">
+                                <input bindinput="handleProxy" class="_input data-v-4bd85d9c" data-comkey="{{$k}}" data-eventid="{{'9'}}" type="digit" value="{{public_base_rate}}"></input>
+                            %
+                        </label>
+                            <view class="_i data-v-4bd85d9c">×</view>
+                            <label class="_span data-v-4bd85d9c mini-input">
+                                <input bindinput="handleProxy" class="_input data-v-4bd85d9c" data-comkey="{{$k}}" data-eventid="{{'10'}}" type="digit" value="{{public_multiple}}"></input>
+                            倍
+                        </label>
+                            <view class="_i data-v-4bd85d9c">=</view>
+                        {{public_rate}}%
+                    </view>
+
+                    </view>
+                </view>
+            </view>
+
+
+<view class="_div data-v-4bd85d9c row multi-row">
+                <label class="_label data-v-4bd85d9c">商贷利率</label>
+                <view class="_div data-v-4bd85d9c content multi-content">
+                    <view class="_div data-v-4bd85d9c" wx:if="{{isBusiness||isCompose}}">
+                        <view class="_div data-v-4bd85d9c input-row">
+                         
+                            <view class="_i data-v-4bd85d9c">=</view>
+                        {{business_rate}}%
+                    </view>
+                    </view>
+
+                </view>
+            </view>
+
+<view class="_div data-v-4bd85d9c row multi-row" wx:if="{{isCompose}}">
+                <label class="_label data-v-4bd85d9c">公积金利率</label>
+                <view class="_div data-v-4bd85d9c content multi-content">
+                    
+                    <view class="_div data-v-4bd85d9c">
+                        <view class="_div data-v-4bd85d9c input-row">
+                            <label class="_span data-v-4bd85d9c mini-input">
+                                <input bindinput="handleProxy" class="_input data-v-4bd85d9c" data-comkey="{{$k}}" data-eventid="{{'9'}}" type="digit" value="{{public_base_rate}}"></input>
+                            %
+                        </label>
+                            <view class="_i data-v-4bd85d9c">×</view>
+                            <label class="_span data-v-4bd85d9c mini-input">
+                                <input bindinput="handleProxy" class="_input data-v-4bd85d9c" data-comkey="{{$k}}" data-eventid="{{'10'}}" type="digit" value="{{public_multiple}}"></input>
+                            倍
+                        </label>
+                            <view class="_i data-v-4bd85d9c">=</view>
+                        {{public_rate}}%
+                    </view>
+
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="_div data-v-4bd85d9c btn-wrap">
+            <button bindtap="handleProxy" class="_button data-v-4bd85d9c large-btn confirm-btn" data-comkey="{{$k}}" data-eventid="{{'11'}}">开始计算</button>
+        </view>
+        <template is="1f444f06" data="{{...$root[$kk+'1'],$root:$root}}"></template>
+    </view>
+</template>
+<import src="/pages/loan_computer/_tabs.vue.wxml"></import>
+<import src="/components/page_wrap.vue.wxml"></import>

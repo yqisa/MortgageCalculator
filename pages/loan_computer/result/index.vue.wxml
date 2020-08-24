@@ -1,0 +1,49 @@
+<template name="3df45496">
+    <view class="_div data-v-4067d0f4">
+        <view class="_h3 data-v-4067d0f4 loan-computer-title">
+            <label class="_span data-v-4067d0f4">房贷计算结果</label>
+            <button class="_button data-v-4067d0f4 share-top-right" openType="share">
+                <image class="_img data-v-4067d0f4" src="/static/img/share-new.png"></image>
+                <label class="_span data-v-4067d0f4">分享</label>
+            </button>
+        </view>
+        <view class="_section data-v-4067d0f4 total">
+            <view class="_strong data-v-4067d0f4">
+            {{result.monthly_payment}}
+            <view class="_i data-v-4067d0f4">元</view>
+            </view>
+            <view class="_div data-v-4067d0f4">每月还款</view>
+        </view>
+        <view class="_section data-v-4067d0f4">
+            <view class="_div data-v-4067d0f4 row">
+                <label class="_label data-v-4067d0f4">支付利息</label>
+                <label class="_span data-v-4067d0f4">
+                {{result.total_interest}}万
+            </label>
+            </view>
+            <view class="_div data-v-4067d0f4 row">
+                <label class="_label data-v-4067d0f4">还款总额</label>
+                <label class="_span data-v-4067d0f4">
+                {{result.total_payment}}万
+            </label>
+            </view>
+            <view class="_div data-v-4067d0f4 row">
+                <label class="_label data-v-4067d0f4">贷款总额</label>
+                <label class="_span data-v-4067d0f4">
+                {{loan}}万
+            </label>
+            </view>
+            <view class="_div data-v-4067d0f4 row">
+                <label class="_label data-v-4067d0f4">按揭年数</label>
+                <label class="_span data-v-4067d0f4">
+                {{year+'年('+year*12+'月)'}}
+            </label>
+            </view>
+        </view>
+        <view class="_section data-v-4067d0f4">
+            <view bindtap="handleProxy" class="_div data-v-4067d0f4 row navigator-arrow" data-comkey="{{$k}}" data-eventid="{{'0'}}">
+                <label class="_label data-v-4067d0f4">贷款明细</label>
+            </view>
+        </view>
+    </view>
+</template>

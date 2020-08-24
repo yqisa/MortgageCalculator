@@ -1,0 +1,15 @@
+<template name="0c7274e9">
+    <view class="_div data-v-0b38b6ba">
+        <view class="_h3 data-v-0b38b6ba loan-computer-title">
+            <label class="_span data-v-0b38b6ba">房贷计算明细</label>
+            <button class="_button data-v-0b38b6ba share-top-right" openType="share">
+                <image class="_img data-v-0b38b6ba" src="/static/img/share-new.png"></image>
+                <label class="_span data-v-0b38b6ba">分享</label>
+            </button>
+        </view>
+        <view class="_div data-v-0b38b6ba content">
+            <template is="efae1fee" data="{{...$root[$kk+'0-'+i],$root:$root}}" wx:for="{{result}}" wx:for-index="i" wx:key="i"></template>
+        </view>
+    </view>
+</template>
+<import src="_item.vue.wxml"></import>

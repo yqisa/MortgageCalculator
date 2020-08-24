@@ -1,0 +1,44 @@
+<template name="efae1fee">
+    <view class="_div data-v-f2219c4c item">
+        <view class="_div data-v-f2219c4c year">
+        {{item.year}}年
+    </view>
+        <view bindtap="handleProxy" class="_div data-v-f2219c4c {{[ [show?'show':''] ]}}" data-comkey="{{$k}}" data-eventid="{{'0'}}">
+            <view class="_i data-v-f2219c4c arr">
+                <image class="_img data-v-f2219c4c" src="/static/img/right-link.png"></image>
+            </view>
+            <view class="_div data-v-f2219c4c total">
+                <view class="_div data-v-f2219c4c">
+                    <label class="_span data-v-f2219c4c">
+                        <view class="_strong data-v-f2219c4c">{{item.total_payment.total_pay}}</view>
+                        <view class="_i data-v-f2219c4c">元</view>
+                    </label>
+                    <label class="_label data-v-f2219c4c">本年还款</label>
+                </view>
+                <view class="_div data-v-f2219c4c">
+                    <label class="_span data-v-f2219c4c">
+                        <view class="_strong data-v-f2219c4c">{{item.total_payment.total_interest_pay}}</view>
+                        <view class="_i data-v-f2219c4c">元</view>
+                    </label>
+                    <label class="_label data-v-f2219c4c">本年利息</label>
+                </view>
+            </view>
+            <view class="_ul data-v-f2219c4c detail">
+                <view class="_li data-v-f2219c4c">
+                    <label class="_span data-v-f2219c4c">月份</label>
+                    <label class="_span data-v-f2219c4c">本期还款</label>
+                    <label class="_span data-v-f2219c4c">本期本金</label>
+                    <label class="_span data-v-f2219c4c">本期利息</label>
+                    <label class="_span data-v-f2219c4c">本期剩余</label>
+                </view>
+                <view class="_li data-v-f2219c4c {{[ [index===0&&j===0?'active':''] ]}}" key="{{j}}" wx:for="{{item.month_data_arr}}" wx:for-index="j" wx:for-item="month_item" wx:key="j">
+                    <label class="_span data-v-f2219c4c">{{month_item.month}}</label>
+                    <label class="_span data-v-f2219c4c">{{month_item.data.monthly_payment}}</label>
+                    <label class="_span data-v-f2219c4c">{{month_item.data.base_payment}}</label>
+                    <label class="_span data-v-f2219c4c">{{month_item.data.interest_payment}}</label>
+                    <label class="_span data-v-f2219c4c">{{month_item.data.reset_payment}}</label>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>
